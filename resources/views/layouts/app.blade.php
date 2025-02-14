@@ -1,36 +1,109 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
+<html lang="en">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sofax || Responsive HTML 5 Template</title>
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <!--- End favicon-->
 
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-    </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
-            @include('layouts.navigation')
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@100..900&display=swap"
+        rel="stylesheet">
+    <!-- End google font  -->
 
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endif
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/custom-font.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/splitting.css">
+    <link rel="stylesheet" href="assets/css/icomoon.css">
 
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
+    <!-- Code Editor  -->
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/app.min.css">
+</head>
+
+<body class="light">
+
+    <div class="sofax-preloader-wrap">
+        <div class="sofax-preloader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
-    </body>
+    </div>
+
+    <!-- progress bar -->
+
+    <div class="progress-bar-container">
+        <div class="progress-bar"></div>
+    </div>
+
+    <!-- progress circle -->
+    <div class="paginacontainer">
+        <div class="progress-wrap">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+            </svg>
+            <div class="top-arrow">
+                <img src="assets/images/arrowtop.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- End All Js -->
+
+
+    @include('include.navbar')
+
+
+
+    {{ $slot }}
+
+
+    @include('include.footer')
+
+
+
+    <!-- scripts -->
+    <script src="assets/js/jquery-3.7.1.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/menu/menu.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/countdown.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/modernizr.min.js"></script>
+    <script src="assets/js/countdown.js"></script>
+    <script src="assets/js/skill-bar.js"></script>
+    <script src="assets/js/pricing-switcher.js"></script>
+    <script src="assets/js/top-to-bottom.js"></script>
+    <script src="assets/js/gsap.js"></script>
+    <script src="assets/js/ScrollTrigger.js"></script>
+    <script src="assets/js/SplitText.js"></script>
+    <script src="assets/js/gsap-animation.js"></script>
+
+
+    <!-- <script src="assets/js/scrollsmooth.js"></script> -->
+    <script src="assets/js/accordion.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyArZVfNvjnLNwJZlLJKuOiWHZ6vtQzzb1Y"></script>
+
+    <script src="assets/js/app.js"></script>
+
+</body>
+
 </html>
