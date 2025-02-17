@@ -32,6 +32,7 @@
 
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/app.min.css">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body class="light">
@@ -64,17 +65,7 @@
     </div>
     <!-- End All Js -->
 
-
-    @include('include.navbar')
-
-
-
     {{ $slot }}
-
-
-    @include('include.footer')
-
-
 
     <!-- scripts -->
     <script src="assets/js/jquery-3.7.1.js"></script>
@@ -104,6 +95,7 @@
 
     <script src="assets/js/app.js"></script>
 
+    @stack('script')
 </body>
 
 </html>
