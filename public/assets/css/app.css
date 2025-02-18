@@ -3,8 +3,8 @@
     Template Name: 'Relik-Admin Dashboard'
     Template URI:
     Description:
-    Author: 
-    Author URI: 
+    Author:
+    Author URI:
     Version: 1.0.0
     -------------------------------------------------
      1.0 base css
@@ -18,7 +18,7 @@
 {
 --heading-color: #0E0E0E;
 --body-color: #3C3C3C;
---accent-color: #E5ABF3;
+--accent-color: #575757;
 --light-bg: #F9F9FA;
 --dark-bg: #0E0E0E;
 --white-bg: #fff;

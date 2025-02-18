@@ -3,7 +3,7 @@
         <div class="container">
             <div class="sofax-section-title center">
                 <div class="tg-heading-subheading animation-style3">
-                    <h2>See what our users have to say about it</h2>
+                    <h2>Our Portfolio</h2>
                 </div>
             </div>
         </div>
