@@ -1,21 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sofax || Responsive HTML 5 Template</title>
-
-    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <title>Pasang Kaca Stiker</title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="shortcut icon" href="{{ asset('image/Logo Pasangkacafilm.webp') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('image/Logo Pasangkacafilm.webp') }}" type="image/x-icon">
     <!--- End favicon-->
 
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@100..900&display=swap"
         rel="stylesheet">
     <!-- End google font  -->
+    {{-- seo --}}
 
+    <meta name="description"
+        content="Pasang kaca sticker berkualitas untuk rumah, kantor, dan mobil. Jasa pemasangan kaca film terpercaya dengan harga terbaik. Dapatkan penawaran spesial hari ini!">
+
+    {{-- end Seo --}}
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
     <link rel="stylesheet" href="assets/css/magnific-popup.css">
@@ -94,6 +99,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyArZVfNvjnLNwJZlLJKuOiWHZ6vtQzzb1Y"></script>
 
     <script src="assets/js/app.js"></script>
+
 
     @stack('script')
 </body>

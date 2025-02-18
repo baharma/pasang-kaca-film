@@ -1,19 +1,29 @@
+@push('script')
+    <script>
+        function heroMain() {
+            return {
+                profile: {},
+                init() {
+                    this.profile = Alpine.store('profileStore').profile;
+
+                }
+            }
+        }
+    </script>
+@endpush
+
 <div id="home" class=" section sofax-section-padding4">
     <div class="container">
         <div class="row">
             <div class="col-lg-7">
-                <div class="sofax-hero-content hero-v8">
+                <div class="sofax-hero-content hero-v8 mx-3">
                     <h1 class="slider-custom-anim-left" data-ani="slider-custom-anim-left" data-ani-delay="0.3s">
-                        Empower your to business journey with IT expertise</h1>
-                    <p>IT expertise is crucial for the growth and sustainability of any business. Here’s how
-                        integrating robust IT solutions can empower your business journey:</p>
+                        Solusi Estetika & Keamanan untuk Hunian Modern!</h1>
+                    <p>Kaca film premium kami meningkatkan estetika dan keamanan hunian modern dengan mengurangi panas,
+                        silau, dan melindungi dari sinar UV</p>
                     <div class="sofax-hero-btn-wrap sofax-hero5-btn extra-mt">
-                        <a class="sofax-default-btn pill wow fadeInUpX" data-wow-delay=".010s" data-text="Explore More"
-                            href="contact-us.html">
-                            <span class="button-wraper">Explore More</span>
-                        </a>
                         <a class="sofax-default-btn pill dark-btn wow fadeInUpX" data-wow-delay="0.20s"
-                            data-text="Contact Us" href="service.html">
+                            data-text="Contact Us" href="">
                             <span class="button-wraper">Contact Us</span>
                         </a>
                     </div>
@@ -21,12 +31,15 @@
             </div>
             <div class="col-lg-5">
                 <div class="sofax-hero-thumb8 wow fadeInUpX position-ralatiove">
-                    <img src="assets/images/v8/image1v8.png" alt="">
+                    <img src="{{ asset('image/WhatsApp Image 2025-02-18 at 12.06.24_46f0ff3f.jpg') }}" alt=""
+                        height="600px">
                     <div class="sofax-hero-shape-v8">
-                        <img src="assets/images/v8/shape1v8.png" alt="">
+                        <img src="{{ asset('image/WhatsApp Image 2025-02-18 at 12.06.24_109c4eaa.jpg') }}"
+                            alt="" height="400px">
                     </div>
                     <div class="sofax-hero-shape2-v8">
-                        <img src="assets/images/v8/shape2v8.png" alt="">
+                        <img src="{{ asset('image/WhatsApp Image 2025-02-18 at 12.06.24_0e2c56fe.jpg') }}"
+                            alt="" height="400px">
                     </div>
                 </div>
             </div>

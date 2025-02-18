@@ -1,18 +1,14 @@
-<div id="blog" class="section sofax-section-padding">
+<div id="blog" x-data="ourService()" x-init="init()" class="section sofax-section-padding">
     <div class="container">
         <div class="sofax-section-title">
             <div class="row">
                 <div class="col-xl-7 col-lg-8">
                     <div class="tg-heading-subheading animation-style3">
-                        <h2>Recently completed to our latest projects</h2>
+                        <h2>Our Service</h2>
                     </div>
                 </div>
                 <div class="col-xl-5 col-lg-4 d-flex justify-content-end align-items-center">
-                    <div class="sofax-title-btn wow fadeInUpX">
-                        <a class="sofax-default-btn pill" data-text="View All Projects" href="service.html">
-                            <span class="button-wraper">View All Projects</span>
-                        </a>
-                    </div>
+
                 </div>
             </div>
         </div>

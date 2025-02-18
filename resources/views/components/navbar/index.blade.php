@@ -17,7 +17,7 @@
             <!-- Brand Logo-->
             <div class="brand-logo">
                 <a href="/" class="lead fw-bolder" style="text-decoration: none;color:brown;">
-                    Pasang Kaca Stiker
+                    <img src="{{ asset('image/Logo Pasangkacafilm.webp') }}" alt="">
                 </a>
             </div>
             <div class="menu-block-wrapper">
@@ -39,7 +39,7 @@
                             <a href="#service" class="nav-link-item">Service</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#pricing" class="nav-link-item">Portfolio</a>
+                            <a href="#portfolio" class="nav-link-item">Portfolio</a>
                         </li>
                         <li class="nav-item">
                             <a href="#blog" class="nav-link-item">About Us</a>
@@ -54,7 +54,7 @@
             <div class="header-btn header-three-site-btn header-btn-l1 ms-auto d-none d-xs-inline-flex">
                 <a class="sofax-default-btn pill sofax-header-btn" data-text="Get started" href="#">
                     <span class="button-wraper">Contact Us</span>
-                  </a>
+                </a>
             </div>
             <!-- mobile menu trigger -->
             <div class="mobile-menu-trigger ">
