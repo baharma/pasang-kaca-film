@@ -1,4 +1,5 @@
-<div id="blog" x-data="ourService()" x-init="init()" class="section sofax-section-padding">
+@props(['heroOutservice'=>null])
+<div id="blog" class="section sofax-section-padding">
     <div class="container">
         <div class="sofax-section-title">
             <div class="row">
@@ -13,102 +14,20 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <a href="single-blog.html">
-                    <div class="sofax-testimonial-itemv8 wow fadeInUpX" data-wow-delay="0.1s">
-                        <div class="sofax-testimonial-thumbv8">
-                            <img src="assets/images/v8/thumb6v8.png" alt="">
-                            <div class="sofax-testimonial-btnv8 light-color">
-                                <h4>CRM Softwere</h4>
-                                <p>Development</p>
-                                <div class="right-icon-btn">
-                                    <img src="assets/images/v8/icon-right-arrow.png" alt="">
+            @foreach ($heroOutservice['hero_image'] as  $item)
+                <div class="col-lg-4 col-md-6">
+                    <a >
+                        <div class="sofax-testimonial-itemv8 wow fadeInUpX" data-wow-delay="0.1s">
+                            <div class="sofax-testimonial-thumbv8">
+                                <img src="{{ 'https://api.apexhub.id/assets/'.$item['image'] }}" alt="" height="300px" width="300px" >
+                                <div class="sofax-testimonial-btnv8 light-color">
+                                    <h4>{{ $item['name'] }}</h4>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <a href="single-blog.html">
-                    <div class="sofax-testimonial-itemv8 wow fadeInUpX" data-wow-delay="0.2s">
-                        <div class="sofax-testimonial-thumbv8">
-                            <img src="assets/images/v8/thumb1v8.png" alt="">
-                            <div class="sofax-testimonial-btnv8 light-color">
-                                <h4>CRM Softwere</h4>
-                                <p>Development</p>
-                                <div class="right-icon-btn">
-                                    <img src="assets/images/v8/icon-right-arrow.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <a href="single-blog.html">
-                    <div class="sofax-testimonial-itemv8 wow fadeInUpX" data-wow-delay="0.3s">
-                        <div class="sofax-testimonial-thumbv8">
-                            <img src="assets/images/v8/thumb2v8.png" alt="">
-                            <div class="sofax-testimonial-btnv8 light-color">
-                                <h4>CRM Softwere</h4>
-                                <p>Development</p>
-                                <div class="right-icon-btn">
-                                    <img src="assets/images/v8/icon-right-arrow.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <a href="single-blog.html">
-                    <div class="sofax-testimonial-itemv8 wow fadeInUpX" data-wow-delay="0.4s">
-                        <div class="sofax-testimonial-thumbv8">
-                            <img src="assets/images/v8/thumb3v8.png" alt="">
-                            <div class="sofax-testimonial-btnv8 light-color">
-                                <h4>CRM Softwere</h4>
-                                <p>Development</p>
-                                <div class="right-icon-btn">
-                                    <img src="assets/images/v8/icon-right-arrow.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <a href="single-blog.html">
-                    <div class="sofax-testimonial-itemv8 wow fadeInUpX" data-wow-delay="0.5s">
-                        <div class="sofax-testimonial-thumbv8">
-                            <img src="assets/images/v8/thumb4v8.png" alt="">
-                            <div class="sofax-testimonial-btnv8 light-color">
-                                <h4>CRM Softwere</h4>
-                                <p>Development</p>
-                                <div class="right-icon-btn">
-                                    <img src="assets/images/v8/icon-right-arrow.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <a href="single-blog.html">
-                    <div class="sofax-testimonial-itemv8 wow fadeInUpX" data-wow-delay="0.6s">
-                        <div class="sofax-testimonial-thumbv8">
-                            <img src="assets/images/v8/thumb5v8.png" alt="">
-                            <div class="sofax-testimonial-btnv8 light-color">
-                                <h4>CRM Softwere</h4>
-                                <p>Development</p>
-                                <div class="right-icon-btn">
-                                    <img src="assets/images/v8/icon-right-arrow.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
+                    </a>
+                </div>
+            @endforeach
         </div>
     </div>
 </div>

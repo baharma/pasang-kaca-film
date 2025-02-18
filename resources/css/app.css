@@ -1,3 +1,34 @@
 /* @tailwind base;
 @tailwind components;
 @tailwind utilities; */
+
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px; /* Adjust the distance from the bottom */
+    left: 20px; /* Adjust the distance from the left */
+    background-color: #25d366; /* WhatsApp green color */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure it stays on top */
+    cursor: pointer;
+}
+
+/* WhatsApp icon styling */
+.whatsapp-button img {
+    width: 35px;
+    height: 35px;
+}
+
+/* Prevent dragging */
+.whatsapp-button img {
+    pointer-events: none;
+}
+.grey-scale {
+    filter: grayscale(100%);
+}

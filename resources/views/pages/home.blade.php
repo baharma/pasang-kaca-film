@@ -1,31 +1,16 @@
-@push('script')
-    <script>
-        function home() {
-            return {
-                async getApi() {
-                    const response = await axios.get('https://api.apexhub.id/api/web-base/code/pasangkacafilm');
-                    const data = response.data;
-                    Alpine.store('profileStore').profile = data.data;
-                    Alpine.store('profileStore').ourServices = data.data.hero[0];
-                    Alpine.store('profileStore').ourPortfolio = data.data.hero[1];
-                    Alpine.store('profileStore').aboutUs = data.data.hero[2];
-                },
-                init() {
-                    this.getApi();
-                }
-            };
-        }
-    </script>
-@endpush
 
 <x-app-layout>
-    <div x-data="home()">
-    </div>
-    <x-navbar.index />
+
+    <x-navbar.index :profile="$profileHero" />
     <x-main-hero.index />
-    <x-our-service-hero.index />
-    <x-our-portfolio.index />
+    <x-our-service-hero.index :heroOutservice="$heroOutservice" />
+    <x-our-portfolio.index :heroPortfolio="$heroPortfolio" />
     <x-about-us.index />
     <x-footer.index />
 
+
+    <a href="https://api.whatsapp.com/send?phone={{ $profileHero->tlp ?? '' }}&text={{ urlencode('Halo mau menjadi mitra Balihooo') }}"
+        target="_blank" class="whatsapp-button" title="Chat via WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
+    </a>
 </x-app-layout>
