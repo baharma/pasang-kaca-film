@@ -4,10 +4,7 @@
             return {
                 profile: '',
                 init() {
-                    window.addEventListener('profile-fetched', event => {
-                        this.profile = event.detail;
-                        console.log('Profile telah diterima:', Alpine.store('profileStore').profile);
-                    });
+                    console.log('Profile telah diterima:', Alpine.store('profileStore').profile);
                 }
             }
         }
@@ -55,7 +52,9 @@
             </div>
 
             <div class="header-btn header-three-site-btn header-btn-l1 ms-auto d-none d-xs-inline-flex">
-
+                <a class="sofax-default-btn pill sofax-header-btn" data-text="Get started" href="#">
+                    <span class="button-wraper">Contact Us</span>
+                  </a>
             </div>
             <!-- mobile menu trigger -->
             <div class="mobile-menu-trigger ">

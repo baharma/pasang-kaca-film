@@ -1,19 +1,14 @@
+import Alpine from 'alpinejs';
 import './bootstrap';
 
-import Alpine from 'alpinejs';
+
+Alpine.store('profileStore', {
+    profile: {},
+    ourServices: [],
+    ourPortfolio: [],
+    mainHero: [],
+    aboutUs: [],
+});
 
 window.Alpine = Alpine;
-
 Alpine.start();
-
-
-
-document.addEventListener('alpine:init', () => {
-    Alpine.store('profileStore', {
-        profile: [],
-        ourServices: [],
-        ourPortfolio: [],
-        mainHero: [],
-        aboutUs: [],
-    });
-});
