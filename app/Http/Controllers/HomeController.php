@@ -9,7 +9,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $response = Http::get('https://api.apexhub.id/api/web-base/code/pasangkacafilm');
+        $response = Http::timeout(10)->get('https://api.apexhub.id/api/web-base/code/pasangkacafilm');
 
         if ($response->successful()) {
             $data = $response->json(); // Ubah response menjadi array
@@ -21,6 +21,6 @@ class HomeController extends Controller
         $aboutUs = $data['data']['hero'][2];
         $profileHero = $data;
 
-        return view('pages.home',compact('heroOutservice','heroPortfolio','aboutUs','profileHero'));
+        return view('pages.home', compact('heroOutservice', 'heroPortfolio', 'aboutUs', 'profileHero'));
     }
 }
