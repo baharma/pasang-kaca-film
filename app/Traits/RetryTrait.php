@@ -2,9 +2,6 @@
 
 namespace App\Traits;
 
-use Illuminate\Support\Facades\Log;
-use Exception;
-
 trait RetryTrait
 {
     /**
@@ -26,17 +23,15 @@ trait RetryTrait
                 if ($result !== null) {
                     return $result;
                 }
-            } catch (Exception $e) {
-                Log::error("Percobaan ke-" . ($retryCount + 1) . " gagal: " . $e->getMessage());
-
-                // Tunggu sebelum mencoba lagi
+            } catch (\Exception $e) {
+                // Jangan tampilkan error ke user, cukup tunggu sebelum retry
                 usleep($delayMs * 1000);
             }
 
             $retryCount++;
         }
 
-        Log::error("Operasi gagal setelah {$maxRetries} percobaan.");
+        // Jika sudah mencapai maxRetries, kembalikan null tanpa menampilkan error
         return null;
     }
 }

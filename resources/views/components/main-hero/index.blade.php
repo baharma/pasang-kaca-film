@@ -5,7 +5,6 @@
                 profile: {},
                 init() {
                     this.profile = Alpine.store('profileStore').profile;
-
                 }
             }
         }

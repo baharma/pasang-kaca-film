@@ -1,7 +1,7 @@
-@props(['profile'=>null])
+@props(['profile' => null])
 
 <header class="site-header sofax-header-section site-header--menu-center" id="sticky-menu">
-    <div class="container" x-data="navbarComponent()">
+    <div class="container">
         <nav class="navbar site-navbar">
             <!-- Brand Logo-->
             <div class="brand-logo">
@@ -41,7 +41,8 @@
             </div>
 
             <div class="header-btn header-three-site-btn header-btn-l1 ms-auto d-none d-xs-inline-flex">
-                <a class="sofax-default-btn pill sofax-header-btn" data-text="Get started" href="https://api.whatsapp.com/send?phone={{ $profile->tlp ?? '' }}&text={{ urlencode('Saya Mau pasang kaca film') }}">
+                <a class="sofax-default-btn pill sofax-header-btn" data-text="Get started"
+                    href="https://api.whatsapp.com/send?phone={{ $profile->tlp ?? '' }}&text={{ urlencode('Saya Mau pasang kaca film') }}">
                     <span class="button-wraper">Contact Us</span>
                 </a>
             </div>
