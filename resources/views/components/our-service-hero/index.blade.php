@@ -19,8 +19,7 @@
                     <a>
                         <div class="sofax-testimonial-itemv8 wow fadeInUpX" data-wow-delay="0.1s">
                             <div class="sofax-testimonial-thumbv8">
-                                <img src="{{ 'https://api.apexhub.id/assets/' . $item['image'] }}" alt=""
-                                    height="300px" width="300px">
+                                <img src="{{ $item['image'] }}" alt="" height="300px" width="300px">
                                 <div class="sofax-testimonial-btnv8 light-color">
                                     <h4>{{ $item['name'] }}</h4>
                                 </div>

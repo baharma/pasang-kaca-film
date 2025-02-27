@@ -6,7 +6,7 @@
             <!-- Brand Logo-->
             <div class="brand-logo">
                 <a href="/" class="lead fw-bolder" style="text-decoration: none;color:brown;">
-                    <img src="{{ asset('image/Logo Pasangkacafilm.webp') }}" alt="">
+                    <img src="{{ asset('image/Logo Pasangkacafilm.webp') }}" style="width: 500px" alt="">
                 </a>
             </div>
             <div class="menu-block-wrapper">

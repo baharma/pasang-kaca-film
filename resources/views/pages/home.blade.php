@@ -2,9 +2,9 @@
 
     <x-navbar.index :profile="$profileHero" />
     <x-main-hero.index />
-    <x-our-service-hero.index :heroOutservice="$heroOutservice" />
-    <x-our-portfolio.index :heroPortfolio="$heroPortfolio" />
-    <x-about-us.index />
+    <x-our-service-hero.index :heroOutservice="$heroOutservice ?? null" />
+    <x-our-portfolio.index :heroPortfolio="$heroPortfolio ?? null" />
+    <x-about-us.index :aboutUs="$aboutUs" />
     <x-footer.index />
 
 
