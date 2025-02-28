@@ -1,16 +1,3 @@
-@push('script')
-    <script>
-        function heroMain() {
-            return {
-                profile: {},
-                init() {
-                    this.profile = Alpine.store('profileStore').profile;
-                }
-            }
-        }
-    </script>
-@endpush
-
 <div id="home" class=" section sofax-section-padding4">
     <div class="container">
         <div class="row">
@@ -30,11 +17,11 @@
             </div>
             <div class="col-lg-5">
                 <div class="sofax-hero-thumb8 wow fadeInUpX position-ralatiove">
-                    <img src="{{ asset('image/WhatsApp Image 2025-02-18 at 12.06.24_46f0ff3f.jpg') }}" alt=""
-                        height="600px">
+                    <img src="{{ asset('image/WhatsApp Image 2025-02-18 at 12.06.24_46f0ff3f.jpg') }}"
+                        alt="Pasang Kaca Riben Pasang Kaca stiker" height="600px">
                     <div class="sofax-hero-shape-v8">
                         <img src="{{ asset('image/WhatsApp Image 2025-02-18 at 12.06.24_109c4eaa.jpg') }}"
-                            alt="" height="400px">
+                            alt="Pasang Kaca Pasang Kaca stiker" height="400px">
                     </div>
                     <div class="sofax-hero-shape2-v8">
                         <img src="{{ asset('image/WhatsApp Image 2025-02-18 at 12.06.24_0e2c56fe.jpg') }}"

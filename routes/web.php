@@ -16,4 +16,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/blog/{id}',[HomeController::class,'allBlog'])->name('blogs');
+Route::get('/blog/{id}', [HomeController::class, 'allBlog'])->name('blogs');
+Route::get('/blog/detail/{id}', [HomeController::class, 'blog'])->name('blog-detail');

@@ -21,22 +21,22 @@
         content="Pasang kaca sticker berkualitas untuk rumah, kantor, dan mobil. Jasa pemasangan kaca film terpercaya dengan harga terbaik. Dapatkan penawaran spesial hari ini!">
 
     {{-- end Seo --}}
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="assets/css/custom-font.css">
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/aos.css">
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/splitting.css">
-    <link rel="stylesheet" href="assets/css/icomoon.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap-icons.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/swiper-bundle.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/custom-font.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/fontawesome.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/aos.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/slick.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/splitting.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/icomoon.css') }}">
 
     <!-- Code Editor  -->
 
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/app.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/app.min.css') }}">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
@@ -64,7 +64,7 @@
                 <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
             </svg>
             <div class="top-arrow">
-                <img src="assets/images/arrowtop.png" alt="">
+                <img src="{{ asset('assets/images/arrowtop.png') }}" alt="">
             </div>
         </div>
     </div>
@@ -73,32 +73,32 @@
     {{ $slot }}
 
     <!-- scripts -->
-    <script src="assets/js/jquery-3.7.1.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/aos.js"></script>
-    <script src="assets/js/menu/menu.js"></script>
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="assets/js/swiper-bundle.min.js"></script>
-    <script src="assets/js/countdown.js"></script>
-    <script src="assets/js/slick.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/modernizr.min.js"></script>
-    <script src="assets/js/countdown.js"></script>
-    <script src="assets/js/skill-bar.js"></script>
-    <script src="assets/js/pricing-switcher.js"></script>
-    <script src="assets/js/top-to-bottom.js"></script>
-    <script src="assets/js/gsap.js"></script>
-    <script src="assets/js/ScrollTrigger.js"></script>
-    <script src="assets/js/SplitText.js"></script>
-    <script src="assets/js/gsap-animation.js"></script>
+    <script src="{{ asset('assets/js/jquery-3.7.1.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/js/aos.js') }}"></script>
+    <script src="{{ asset('assets/js/menu/menu.js') }}"></script>
+    <script src="{{ asset('assets/js/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('assets/js/swiper-bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/js/countdown.js') }}"></script>
+    <script src="{{ asset('assets/js/slick.js') }}"></script>
+    <script src="{{ asset('assets/js/wow.min.js') }}"></script>
+    <script src="{{ asset('assets/js/modernizr.min.js') }}"></script>
+    <script src="{{ asset('assets/js/countdown.js') }}"></script>
+    <script src="{{ asset('assets/js/skill-bar.js') }}"></script>
+    <script src="{{ asset('assets/js/pricing-switcher.js') }}"></script>
+    <script src="{{ asset('assets/js/top-to-bottom.js') }}"></script>
+    <script src="{{ asset('assets/js/gsap.js') }}"></script>
+    <script src="{{ asset('assets/js/ScrollTrigger.js') }}"></script>
+    <script src="{{ asset('assets/js/SplitText.js') }}"></script>
+    <script src="{{ asset('assets/js/gsap-animation.js') }}"></script>
 
 
     <!-- <script src="assets/js/scrollsmooth.js"></script> -->
-    <script src="assets/js/accordion.js"></script>
+    <script src="{{ asset('assets/js/accordion.js') }}"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyArZVfNvjnLNwJZlLJKuOiWHZ6vtQzzb1Y"></script>
 
-    <script src="assets/js/app.js"></script>
+    <script src="{{ asset('assets/js/app.js') }}"></script>
 
 
     @stack('script')
