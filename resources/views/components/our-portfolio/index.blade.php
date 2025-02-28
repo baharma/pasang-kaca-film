@@ -3,7 +3,7 @@
     <div class="container">
         <div class="sofax-section-title center">
             <div class="tg-heading-subheading animation-style3">
-                <h2>Our Portfolio</h2>
+                <h2>Our Project</h2>
             </div>
         </div>
     </div>

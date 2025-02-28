@@ -35,7 +35,12 @@ class HomeController extends Controller
         return view('pages.home', compact('heroOutservice', 'heroPortfolio', 'aboutUs', 'profileHero'));
     }
 
-    public function allBlog() {}
+    public function allBlog($id) {
+        $response = $this->executeWithRetry(function () {
+            return Http::timeout(30)->get('https://api.apexhub.id/api/blog/$id');
+        });
+        $data = $response->json();
+    }
 
     public function blog($id) {}
 }
