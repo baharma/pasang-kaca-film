@@ -1,20 +1,21 @@
 FROM php:8.2-fpm
 
-# Instal dependencies
+# Install dependencies, including libicu-dev for intl
 RUN apt-get update && apt-get install -y \
     libzip-dev \
     unzip \
     libonig-dev \
-    libxml2-dev
+    libxml2-dev \
+    libicu-dev \
+    && docker-php-ext-install intl \
+    && docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath zip opcache
 
-RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath zip opcache
-
-# Instal composer
+# Install composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 WORKDIR /var/www/html
 
-# Copy files dan install dependencies
+# Copy files and install dependencies
 COPY . .
 RUN composer install --optimize-autoloader --no-dev --no-interaction --prefer-dist
 
@@ -23,4 +24,5 @@ RUN php artisan config:cache && \
     php artisan route:cache && \
     php artisan view:cache
 
+# Ensure storage is writable
 RUN chown -R www-data:www-data /var/www/html/storage
