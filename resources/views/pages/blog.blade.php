@@ -1,4 +1,22 @@
 <x-app-layout>
+    <x-slot name="metaHead">
+        <x-seo-head
+        canonicalUrl="{{ $seo['canonical_url'] }}"
+        ogTitle="{{ $seo['seo_og_title']  }}"
+        ogDescription="{{ $seo['seo_og_description']  }}"
+        ogImage="{{ $seo['seo_og_image']  }}"
+        keyword="{{ $seo['seo_keyword']   }}"
+        description="{{ $seo['seo_description']   }}"
+        name="{{ $seo['name'] }}"
+    />
+    </x-slot>
+    <x-slot name="metaBody">
+        <x-seo-body
+            name="{{ $seo['name'] }}"
+            description="{{ $seo['seo_description'] }}"
+            canonicalUrl="{{ $seo['canonical_url'] }}"
+        />
+    </x-slot>
     <x-navbar.index :profile="$profileHero" />
 
     <section class="sofax-section-padding2">

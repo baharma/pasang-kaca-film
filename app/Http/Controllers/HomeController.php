@@ -9,11 +9,15 @@ use Illuminate\Support\Facades\Http;
 class HomeController extends Controller
 {
     use RetryTrait;
-
+    protected $apiURL;
+    public function __construct()
+    {
+        $this->apiURL = env('API_APEX_HUB');
+    }
     public function index()
     {
         $response = $this->executeWithRetry(function () {
-            return Http::timeout(30)->get('https://api.apexhub.id/api/web-base/code/pasangkacafilm');
+            return Http::timeout(30)->get($this->apiURL .'/web-base/code/pasangkacafilm');
         });
         $data = $response->json();
 
@@ -33,8 +37,12 @@ class HomeController extends Controller
         $aboutUs = $data['data']['website_profile']['hero'][2] ?? null;
         $profileHero = $data;
         $profile = $data['data']['website_profile'];
+        $responseSeo = $this->executeWithRetry(function () use ($profile) {
+            return Http::timeout(30)->get($this->apiURL . '/seo/' . $profile['seo_id']);
+        })->json();
+        $seo = $responseSeo['data'];
 
-        return view('pages.home', compact('heroOutservice', 'heroPortfolio', 'aboutUs', 'profileHero', 'profile'));
+        return view('pages.home', compact('heroOutservice','seo', 'heroPortfolio', 'aboutUs', 'profileHero', 'profile'));
     }
 
     public function allBlog($id)
@@ -75,14 +83,17 @@ class HomeController extends Controller
         $response = $this->executeWithRetry(function () use ($id) {
             return Http::timeout(30)->get("https://api.apexhub.id/api/blog/show/{$id}");
         });
-
         $responseResult = $this->executeWithRetry(function () {
             return Http::timeout(30)->get('https://api.apexhub.id/api/web-base/code/pasangkacafilm');
         });
         $profileHero = $responseResult->json();
         $blogsData = $response->json();
+        $profile = $responseResult['data']['website_profile'];
         $blog = $blogsData['data'];
-
-        return view('pages.blog', compact('profileHero', 'blog'));
+            $responseSeo = $this->executeWithRetry(function () use ($blog) {
+            return Http::timeout(30)->get($this->apiURL . '/seo/' . $blog['seo_id']);
+        })->json();
+        $seo = $responseSeo['data'];
+        return view('pages.blog', compact('profileHero', 'blog','seo'));
     }
 }

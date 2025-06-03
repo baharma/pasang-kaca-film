@@ -9,8 +9,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="shortcut icon" href="{{ asset('image/Logo Pasangkacafilm.webp') }}" type="image/x-icon">
     <link rel="icon" href="{{ asset('image/Logo Pasangkacafilm.webp') }}" type="image/x-icon">
+    <meta name="google-site-verification" content="SV41obGiaJsVl1ogaH4Fs10LoA3l4eFRTbZaxHzjl6w" />
     <!--- End favicon-->
-
+    {{ $metaHead }}
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@100..900&display=swap"
         rel="stylesheet">
@@ -92,7 +93,7 @@
     <script src="{{ asset('assets/js/ScrollTrigger.js') }}"></script>
     <script src="{{ asset('assets/js/SplitText.js') }}"></script>
     <script src="{{ asset('assets/js/gsap-animation.js') }}"></script>
-
+    {{ $metaBody }}
 
     <!-- <script src="assets/js/scrollsmooth.js"></script> -->
     <script src="{{ asset('assets/js/accordion.js') }}"></script>
